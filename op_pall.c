@@ -1,13 +1,15 @@
+/* op_pall.c */
+
 #include "monty.h"
 
-void pall(stack_tm **stac)
+void pall(stack_t **stac)
 {
-    stack_tm *cu = *stac;
+    stack_t *cu = *stac;
 
     while (cu != NULL)
     {
-        printf("%d\n", cu->x);
-        cu = cu->nextone;
+        printf("%d\n", cu->n);
+        cu = cu->next;
     }
 }
 
