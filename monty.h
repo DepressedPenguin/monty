@@ -1,5 +1,3 @@
-/* monty.h */
-
 #ifndef MONTY_H
 #define MONTY_H
 
@@ -15,8 +13,8 @@ typedef struct stack_s
 } stack_t;
 
 /* Prototypes */
-void push(stack_t **stac, int va);
-void pall(stack_t **stac);
+void push(stack_t **stack, int value);
+void pall(stack_t **stack);
 
 #endif /* MONTY_H */
 

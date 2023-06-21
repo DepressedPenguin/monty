@@ -18,7 +18,7 @@ void free_stack(stack_t *stack)
 void process_file(const char *filename, stack_t **stack)
 {
     FILE *file;
-    char line[100];
+    char line[1024];
     int line_number = 1;
     char *opcode;
     char *arg;
@@ -42,8 +42,16 @@ void process_file(const char *filename, stack_t **stack)
             {
                 if (arg != NULL)
                 {
-                    int value = atoi(arg);
-                    push(stack, value);
+                    int value;
+                    if (sscanf(arg, "%d", &value) == 1)
+                        push(stack, value);
+                    else
+                    {
+                        fprintf(stderr, "Error: L%d: usage: push integer\n", line_number);
+                        fclose(file);
+                        free_stack(*stack);
+                        exit(EXIT_FAILURE);
+                    }
                 }
                 else
                 {
