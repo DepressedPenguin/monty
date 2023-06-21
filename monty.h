@@ -18,6 +18,10 @@ void pall(stack_t **stack);
 void pint(stack_t **stack);
 void free_stack(stack_t *stack);
 void process_file(const char *filename, stack_t **stack);
+void pop(stack_t **stack);
+void swap(stack_t **stack);
+void add(stack_t **stack);
+void nop(stack_t **stack);
 
 #endif /* MONTY_H */
 
