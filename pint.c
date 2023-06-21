@@ -5,7 +5,7 @@
 * pint - Prints the value
 * @stack: Pointer to the top
 */
-void pint(stack_t **stack)
+void sint(stack_t **stack)
 {
 if (*stack == NULL)
 {

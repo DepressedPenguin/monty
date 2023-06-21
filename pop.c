@@ -5,7 +5,7 @@
 * pop - Removes the top element
 * @stack: Pointer to the top
 */
-void pop(stack_t **stack)
+void pop_s(stack_t **stack)
 {
 stack_t *tmp;
 

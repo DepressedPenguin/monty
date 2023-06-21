@@ -7,7 +7,7 @@
  * free_stack - Frees a stack
  * @stack: Pointer to the top stack
  */
-void free_stack(stack_t *stack)
+void free_s(stack_t *stack)
 {
     stack_t *tmp;
 
@@ -24,7 +24,7 @@ void free_stack(stack_t *stack)
  * @filename: Name of the Monty file
  * @stack: Pointer to the top stack
  */
-void process_file(const char *filename, stack_t **stack)
+void process_f(const char *filename, stack_t **stack)
 {
     FILE *file;
     char line[1024];
@@ -53,12 +53,12 @@ void process_file(const char *filename, stack_t **stack)
                 {
                     int value;
                     if (sscanf(arg, "%d", &value) == 1)
-                        push(stack, value);
+                        push_stack(stack, value);
                     else
                     {
                         fprintf(stderr, "Error: L%d: usage: push integer\n", line_number);
                         fclose(file);
-                        free_stack(*stack);
+                        free_s(*stack);
                         exit(EXIT_FAILURE);
                     }
                 }
@@ -66,23 +66,23 @@ void process_file(const char *filename, stack_t **stack)
                 {
                     fprintf(stderr, "Error: L%d: usage: push integer\n", line_number);
                     fclose(file);
-                    free_stack(*stack);
+                    free_s(*stack);
                     exit(EXIT_FAILURE);
                 }
             }
             else if (strcmp(opcode, "pall") == 0)
             {
-                pall(stack);
+                pall_p(stack);
             }
             else if (strcmp(opcode, "pint") == 0)
             {
-                pint(stack);
+                sint(stack);
             }
             else
             {
                 fprintf(stderr, "Error: L%d: unknown instruction %s\n", line_number, opcode);
                 fclose(file);
-                free_stack(*stack);
+                free_s(*stack);
                 exit(EXIT_FAILURE);
             }
         }
@@ -90,6 +90,6 @@ void process_file(const char *filename, stack_t **stack)
     }
 
     fclose(file);
-    free_stack(*stack);
+    free_s(*stack);
 }
 

@@ -20,8 +20,8 @@ fprintf(stderr, "Usage: monty file\n");
 exit(EXIT_FAILURE);
 }
 filename = argv[1];
-process_file(filename, &stack);
-free_stack(stack);
+process_f(filename, &stack);
+free_s(stack);
 return (0);
 }
 

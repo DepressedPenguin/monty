@@ -5,7 +5,7 @@
 * swap - Swaps the top two elements
 * @stack: Pointer to the top stack
 */
-void swap(stack_t **stack)
+void swap_swap(stack_t **stack)
 {
 int temp;
 if (*stack == NULL || (*stack)->next == NULL)

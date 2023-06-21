@@ -13,15 +13,15 @@ typedef struct stack_s
 } stack_t;
 
 /* Function Prototypes */
-void push(stack_t **stack, int value);
-void pall(stack_t **stack);
-void pint(stack_t **stack);
-void free_stack(stack_t *stack);
-void process_file(const char *filename, stack_t **stack);
-void pop(stack_t **stack);
-void swap(stack_t **stack);
-void add(stack_t **stack);
-void nop(stack_t **stack);
+void push_stack(stack_t **stack, int value);
+void pall_p(stack_t **stack);
+void sint(stack_t **stack);
+void free_s(stack_t *stack);
+void process_f(const char *filename, stack_t **stack);
+void pop_s(stack_t **stack);
+void swap_swap(stack_t **stack);
+void add_s(stack_t **stack);
+void nop_g(stack_t **stack);
 
 #endif /* MONTY_H */
 

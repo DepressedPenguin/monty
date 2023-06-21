@@ -3,7 +3,7 @@
 * pall - Prints all the values
 * @stack: Double pointer
 */
-void pall(stack_t **stack)
+void pall_p(stack_t **stack)
 {
 stack_t *current = *stack;
 

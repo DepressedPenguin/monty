@@ -4,7 +4,7 @@
 * @stack: Double pointer
 * @value: Value
 */
-void push(stack_t **stack, int value)
+void push_stack(stack_t **stack, int value)
 {
 stack_t *new_node = malloc(sizeof(stack_t));
 if (new_node == NULL)
